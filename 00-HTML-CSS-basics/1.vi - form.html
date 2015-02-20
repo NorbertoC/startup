@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>1.VI - HTML and CSS Basics</title>
+	</head>
+	<body>
+    <form method="post" id="register">
+       <h2>Please Sign-up</h2>
+       <label for="firstname">First Name</label>
+       	<input type="text" name="firstname" id="firstname" placeholder="Juan" required>
+       	<br>
+       <label for="lastname">Last Name</label>
+       	<input type="text" name="lastname" id="lastname" placeholder="Perez" required>
+       	<br>
+       <label>Email address</label>
+       	<input type="email" name="email" id="email" placeholder="juan.perez@globant.com" required>
+       <br>
+       <label>Birthday</label>
+				<input type="date" name="birthday" required><br>
+			<label>Favourite sport</label>
+				<select name="select">
+					<option value="Football">Football</option>
+					<option value="Tennis">Tennis</option>
+					<option value="Hockey">Hockey</option>
+					<option value="Rugby">Rugby</option>
+					<option value="Basketball">Basketball</option>
+					<option value="Athletism">Athletism</option>
+				</select>
+				<br>
+			<label>About</label>
+				<br>
+				<textarea name="message" rows="10" cols="30" placeholder="Something about you"></textarea><br>
+				<input type="reset" value="Clear">
+				<input type="submit" name="Submit" value="Sign up">
+    </form>
+	</body>
+</html>
