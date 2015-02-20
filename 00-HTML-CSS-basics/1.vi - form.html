@@ -7,19 +7,21 @@
 	</head>
 	<body>
     <form method="post" id="register">
-      <h2>Please Sign-up</h2>
+    	<h2>Please Sign-up</h2>
       <label for="firstname">First Name</label>
        	<input type="text" name="firstname" id="firstname" placeholder="Juan" required>
        	<br>
       <label for="lastname">Last Name</label>
        	<input type="text" name="lastname" id="lastname" placeholder="Perez" required>
        	<br>
-      <label>Email address</label>
+      <label>Email address
        	<input type="email" name="email" id="email" placeholder="juan.perez@globant.com" required>
-      	<br>
-      <label>Birthday</label>
-				<input type="date" name="birthday" required><br>
-			<label>Favourite sport</label>
+      </label>
+      <br>
+      <label>Birthday<input type="date" name="birthday" required>
+			</label>
+			<br>
+			<label>Favourite sport
 				<select name="select">
 					<option value="Football">Football</option>
 					<option value="Tennis">Tennis</option>
@@ -28,10 +30,13 @@
 					<option value="Basketball">Basketball</option>
 					<option value="Athletism">Athletism</option>
 				</select>
+				</label>
 				<br>
-			<label>About</label>
+			<label>About
 				<br>
-				<textarea name="message" rows="10" cols="30" placeholder="Something about you"></textarea><br>
+				<textarea name="message" rows="10" cols="30" placeholder="Something about you"></textarea>
+				</label>
+				<br>
 				<input type="reset" value="Clear">
 				<input type="submit" name="Submit" value="Sign up">
     </form>
