@@ -81,12 +81,16 @@ p {
 
 #title {
   text-align: center;
-  text-decoration: 
   color: #0000FF;
   font-size: 46px;
   background-color: #FFD700;
   color: white; 
   border-radius: 10px;
   width: 95%;
+}
 
+@media all and (max-width: 1000px) and (min-width: 700px) {
+  .gallery-grid {
+  background-color: #FF0000;
+  }
 }
