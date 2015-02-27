@@ -4,31 +4,30 @@
           box-sizing: border-box;
 }
 
+body {
+  text-align: center;
+}
 
 section{
-  color: #000000;
-  display:none;
+  display: none;
   height: 80px;
-  text-align: center;
   font-size: 30px;
-}
-div{
-	height: 50px;
-  width: 100px;
-  margin: auto;
 }
 .alias{
   width: 100px;
 }
 p{
-  text-align: center;
   font-size: 20px;
-}
-
-h1 {
-  text-align: center;
 }
 
 #section {
   font-size: 36px;
+}
+
+aside {
+  width: 300px;
+  background-color: rgb(244, 244, 244);
+  position: absolute;
+  top: 0;
+  right: 0;
 }
