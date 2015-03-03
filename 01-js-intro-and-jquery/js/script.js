@@ -6,9 +6,9 @@ $(document).ready(function() {
 
     function welcome() {
       var alias = $('.alias').val();
-      var url = 'http://bootcamp.aws.af.cm/welcome/' + alias;
+      var url = 'http://bootcamp.aws.af.cmasd/welcome/' + alias;
 
-      $.get(url, function(data) {
+      $.get(url).done(function(data) {
         console.log(data);
 
         if (data.response) {
@@ -19,7 +19,7 @@ $(document).ready(function() {
       });
     }
 
-    $.get('http://localhost:3000/search', {'q': 'html5'})
+    $.get('http://localhostasdasd:3000/search', {'q': 'html5'})
       .done(function(data) {
         console.log(data);
         $.each(data.statuses, function(key, value) {
@@ -29,9 +29,16 @@ $(document).ready(function() {
             '<div class="text">' + value.text + '</div>' +
             '<div class="date">' + value.created_at + '</div>' +
             '<hr /></article>';
+
           $('.tweets').append(template);
           console.log(value);
         });
-      });
+      })
+      .fail(function(error) {
+        console.log(error);
+      })
+      .always(function(data2) {
+        console.log(data2)
+      })
   //});
 });
