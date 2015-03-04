@@ -10,7 +10,7 @@ header, nav, section, article, aside, footer {
 
 html, body, h1, h2, h3, ul, li, a, p,
 article, aside, footer, header, nav, section {
-    paddingasdasdasdas
+    padding: 0;  
     margin: 0;
 }
 
@@ -55,7 +55,7 @@ li {
 
 section {
     display: inline-block;
-    background-color: #BBBBBB;
+    background-color: #BBB;
     margin: 10px 0 0 9px;
     padding: 5px;
     width: 70%;
@@ -71,7 +71,7 @@ article {
 }
 
 aside {
-    background-color: #BBBBBB;
+    background-color: #BBB;
     width: 10%;
     float: right;
     padding: 10px 0 10px 0;
@@ -90,7 +90,7 @@ footer {
 
 #secfooter {
     margin: 10px auto;
-    background-color: #BBBBBB;
+    background-color: #BBB;
     color: white;
     font-size: 10px;
     background-color: #FF00FF;
@@ -115,7 +115,7 @@ footer {
 
 .content {
     font-size: 14x;
-    background-color: #BBBBBB;
+    background-color: #BBB;
 }
 
 .sidebar {
