@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>My Sample Project</title>
+         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- data-main attribute tells require.js to load
+             scripts/main.js after require.js loads. -->
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="libs/handlebars-v2.0.0.js"></script> 
+        <script src="libs/underscore-min.js"></script> 
+        <script src="libs/dust.js"></script> 
+
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/json.js"></script>
+        <script src="libs/js/script.js"></script>
+    </head>
+    <body>
+      
+
+
+      <script id="some-template" type="text/x-handlebars-template">
+        <div class="container">
+              <div class="row">
+
+                
+                <h1>Handlebars</h1>
+           
+                  <div class="divProfile">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">{{fullName person}}</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div  > <img alt="User Pic" src={{image}} class="img-circle"> </div>
+                        
+                        <div class="divWE"> 
+                          <table class="table table-user-information">
+                            <tbody>
+                              <tr>
+                                <td>Department:</td>
+                                <td>{{jobTitle}}</td>
+                              </tr>
+                              {{#person}}
+                              <tr>
+                                <td>Date of Birth:</td>
+                                <td>{{birth}}</td>
+                              </tr>
+                              
+                                 
+                              <tr>
+                                <td>Gender:</td>
+                                <td> {{gender}} </td>
+                              </tr>
+                                <tr>
+                                <td>Home Adress: </td>
+                                <td>{{adress}}</td>
+                              </tr>
+                              <tr>
+                                <td>Email:</td>
+                                <td><a href="mailto:{{mail}}">{{mail}}</a></td>
+                              </tr>
+                                <td>Phone Number:</td>
+                                <td>{{phone}}(Mobile)
+                                </td>
+                                   
+                              </tr>
+                             {{/person}}
+                            </tbody>
+
+                          </table>
+                                <dt class="alignsth">
+                                    Work Experience: 
+                                </dt>
+                                
+                                {{#pastJobs}}
+                                <dd class="alignsth">
+                                    <ul class="past">
+                                        <li>
+                                            {{year}} - {{job}}<span class="at"> at </span>{{place}}
+                                        </li>
+                                    </ul>
+                                </dd>
+                                {{/pastJobs}}
+                                <dt  class="alignsth">
+                                    Education: 
+                                </dt>
+                                {{#Education}}
+                                <dd  class="alignsth">
+                                    <ul>
+                                        <li>
+                                            {{place}}
+                                        </li>
+                                    </ul>
+                                </dd>
+                                {{/Education}}  
+
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+      </script> 
+    
+
+
+
+      <script id="some-template1" type="text/template">
+        <div >
+              <div class="row">
+
+                
+           <h1>Underscore</h1>
+           
+                  <div class="divProfile">
+                    <div class="panel-heading">
+                      <h3 class="panel-title"> <%=person.firstName+' '+person.lastName%> </h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div  > <img alt="User Pic" src='<%=image%>' class="img-circle"> </div>
+                        
+                        <div class="divWE"> 
+                          <table class="table table-user-information">
+                            <tbody>
+                              <tr>
+                                <td>Department:</td>
+                                <td><%=jobTitle%></td>
+                              </tr>
+
+                              <tr>
+                                <td>Date of Birth:</td>
+                                <td> <%=person.birth%> </td>
+                              </tr>
+                           
+                                 <tr>
+                                     <tr>
+                                <td>Gender:</td>
+                                <td><%=person.gender%></td>
+                              </tr>
+                                <tr>
+                                <td>Home Adress: </td>
+                                <td><%=person.adress%></td>
+                              </tr>
+                              <tr>
+                                <td>Email:</td>
+                                <td><a href="mailto:<%=person.mail%>"><%=person.mail%></a></td>
+                              </tr>
+                                <td>Phone Number:</td>
+                                <td><%=person.phone%> (Mobile)
+                                </td>
+                                   
+                              </tr>
+                             
+                            </tbody>
+
+                          </table>
+
+                                <dt class="alignsth">
+                                    Work Experience: 
+                                </dt>
+                                
+                                    <ul>
+                                        <%for(i=0; i<pastJobs.length;i++) { %>
+                                        <li>   <%= pastJobs[i].year %>  <%=  pastJobs[i].job  %> at <%=pastJobs[i].place%> </li> <%}%>
+                                    </ul> 
+
+
+                                <dt  class="alignsth">
+                                    Education:
+                                </dt>
+                                
+                                
+                                    <ul>
+                                        <%for(i=0; i<Education.length;i++) { %>
+                                        <li> <%= Education[i].place %>  </li> <%}%>
+                                    </ul>
+                                
+                                     
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+      </script> 
+
+      
+      <script id="some-template2" type="entry template">
+        <div>
+              <div>
+
+                
+           <h1>Dust</h1>
+           
+                  <div class="divProfile">
+                    <div class="panel-heading">
+                      <h3 class="panel-title"> {#person} {firstName} {lastName} {/person} </h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div  > <img alt="User Pic" src='{image}' class="img-circle"> </div>
+                        
+                        <div class="divWE"> 
+                          <table class="table table-user-information">
+                            <tbody>
+                              <tr>
+                                <td>Department:</td>
+                                <td>{jobTitle}</td>
+                              </tr>
+
+                              <tr>
+                                <td>Date of Birth:</td>
+                                <td> {person.birth}</td>
+                              </tr>
+                           
+                                 <tr>
+                                     <tr>
+                                <td>Gender:</td>
+                                <td>{person.gender}</td>
+                              </tr>
+                                <tr>
+                                <td>Home Adress: </td>
+                                <td>{person.adress}</td>
+                              </tr>
+                              <tr>
+                                <td>Email:</td>
+                                <td><a href="mailto:{person.mail}">{person.mail}</a></td>
+                              </tr>
+                                <td>Phone Number:</td>
+                                <td>{person.phone} (Mobile)
+                                </td>
+                                   
+                              </tr>
+                             
+                            </tbody>
+
+                          </table>
+
+                                <dt class="alignsth">
+                                    Work Experience: 
+                                </dt>
+                                
+                                    <ul>
+                                        {#pastJobs}
+                                        <li> {year} {job} at {place}  </li> 
+                                        {/pastJobs}
+                                    </ul> 
+
+
+                                <dt  class="alignsth">
+                                    Education:
+                                </dt>
+                                
+                                
+                                    <ul>
+                                        {#Education}
+                                          <li> {place} </li>
+                                        {/Education}
+                                    </ul>
+                                
+                                     
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+      </script> 
+      <div id='salida'>
+      </div>
+
+
+
+
+
+
+    </body>
+</html>
