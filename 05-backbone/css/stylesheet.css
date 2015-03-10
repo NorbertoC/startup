@@ -1,0 +1,94 @@
+html, body {
+    font-family: Verdana, sans-serif;
+    background: linear-gradient(to bottom, rgba(79,133,187,1) 0%,rgba(79,133,187,1) 100%);
+    text-align: left;
+}
+
+.titulo {
+    color: #FFF;
+}
+
+h1 {
+    text-align: center;
+}
+
+.button {
+    color: #FFF;
+    font-weight: bold;
+    background-color: #659CEF;
+    padding: 3px;
+    text-decoration: none;
+    font-variant: small-caps;
+    border: 1px solid #BDBDBD;
+    height: 28px;
+    width: 80px;
+
+    border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+}
+
+.buttonEd {
+    color: #FFF;
+    background-color: #BDBDBD;
+    padding: 3px;
+    border: 1px solid #000;
+    text-decoration: none;
+    font-variant: small-caps;
+    border-radius: 3px; 
+
+
+}
+
+.tbox {
+    border: 1px solid #000;
+    color: #000;
+    font-weight: bold;
+    background-color: #FE9A2E;
+    padding: 3px;
+    text-align: left;
+
+}
+
+.hbox {
+    color: #FCFFF4;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    font-variant: small-caps;
+    font-size: 20px;
+
+}
+
+.editSection {
+    padding: 5px;    
+    text-align: center;
+}
+
+.tSection {
+    padding: 3px;    
+    text-align: left;
+}
+
+.cSection {
+    padding: 3px;    
+    text-align: center;
+}
+
+.hboxV {
+    color: #FCFFF4;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.editMovieForm {
+    border: 1px solid #000;
+    color: #000;
+    font-weight: bold;
+    background-color: #FE9A2E;
+    padding: 3px;
+    text-align: left;
+}
