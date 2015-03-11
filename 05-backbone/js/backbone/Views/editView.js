@@ -9,8 +9,9 @@
                   o[this.name] = [o[this.name]];
               }
               o[this.name].push(this.value || '');
-          } else {
-              o[this.name] = this.value || '';
+          } 
+          else {
+            o[this.name] = this.value || '';
           }
       });
       return o;
@@ -37,10 +38,11 @@ var Edit = Backbone.View.extend({
             var template = _.template(tempEdit);
             this.$el.html(template({movie : movie.attributes, id: idL}));
 
-        } else {
+        }
+        else {
             console.log("nuevo");
-        var template = _.template(tempEdit);
-        this.$el.html(template({movie : ""}));
+            var template = _.template(tempEdit);
+            this.$el.html(template({movie : ""}));
         }
     },
 
@@ -59,7 +61,8 @@ var Edit = Backbone.View.extend({
             var router = new Router();
             router.navigate('', {trigger:true});
             window.location.reload(true);
-        } else {
+        } 
+        else {
             console.log("creacion");
             var movieDetails = {titulo : formDetails.titulo, categoria: formDetails.categoria};
             console.log(movieDetails);
