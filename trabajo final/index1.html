@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Spotify JS</title>
+</head>
+
+<body>
+    <header id='title'>
+        <h1>Spotify Playlist</h1>
+        <p>Con esta pagina podes: </p>
+        <ul>
+            <li>Elegir un artista y ver sus temas</li>
+            <li>Crea una lista nueva o seleccionar una que ya tengas</li>
+            <li>Agregar los temas que te gusten en tu nueva lista</li>
+        </ul>
+    </header>
+    <section>
+        <div id='content'>
+            <div class='description'>
+                <p>Ingresa el nombre del artista</p>
+                <input type="text" id="query" id="query" value="Pearl Jam" />
+                <button id="search" value="search">Buscar</button>
+            </div>
+        </div>
+        <br />
+        <p>Ingresa el nombre de tu nueva playlist (opcional)</p>
+        <input type="text" name="playlist" id="playlist" />
+        <button id="create">Crear nueva Playlist</button>
+        <br />
+        <br />
+        <p>Selecciona tu playlist:</p>
+        <select id="list">
+        </select>
+        <br />
+        <br />
+        <p>Agrega los tracks a tu playlist:</p>
+        <button id="add-tracks">Agregar tracks a tu Playlist</button>
+    </section>
+    <ul id="resultados"></ul>
+    <script type="text/javascript" src="js/jquery2min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
